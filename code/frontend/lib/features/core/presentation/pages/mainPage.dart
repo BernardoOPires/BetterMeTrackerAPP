@@ -14,125 +14,133 @@ class MainPage extends StatelessWidget {
         appBar: Navbar(),
         body: Column(
           children: [
-            Center(
-              child: Column(
-                children: [
-                  //static test -- make it dynamic (listview widget)
-                  Padding(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 30,
-                      vertical: 6,
-                    ),
-                    child: Material(
-                      elevation: 5,
-                      color: supColor,
-                      borderRadius: BorderRadius.circular(15.0),
-                      child: SizedBox(
-                        width: MediaQuery.of(context).size.width * 0.4,
-                        child: MaterialButton(
-                          minWidth: MediaQuery.of(context).size.width * 1,
-                          onPressed: () {},
-                          child: Stack(
-                            alignment: Alignment.center,
-                            children: [
-                              Text("goal 1", style: GoogleFonts.poppins()),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.end,
-                                children: [
-                                  Container(
-                                    padding: EdgeInsets.all(7),
-                                    decoration: BoxDecoration(
-                                      color: supColor,
-                                      shape: BoxShape.circle,
+            Container(
+              color: primaryColor,
+              height: MediaQuery.of(context).size.height * 0.6,
+              width: MediaQuery.of(context).size.width * 0.4,
+              child: Center(
+                child: Column(
+                  children: [
+                    //static test -- make it dynamic (listview widget)
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 30,
+                        vertical: 6,
+                      ),
+                      child: Material(
+                        elevation: 5,
+                        color: supColor,
+                        borderRadius: BorderRadius.circular(15.0),
+                        child: SizedBox(
+                          width: MediaQuery.of(context).size.width * 0.4,
+                          child: MaterialButton(
+                            minWidth: MediaQuery.of(context).size.width * 1,
+                            onPressed: () {},
+                            child: Stack(
+                              alignment: Alignment.center,
+                              children: [
+                                Text("goal 1", style: GoogleFonts.poppins()),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.end,
+                                  children: [
+                                    Container(
+                                      padding: EdgeInsets.all(7),
+                                      decoration: BoxDecoration(
+                                        color: supColor,
+                                        shape: BoxShape.circle,
+                                      ),
+                                      child: Icon(Icons.arrow_right),
                                     ),
-                                    child: Icon(Icons.arrow_right),
-                                  ),
-                                ],
-                              ),
-                            ],
+                                  ],
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       ),
                     ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 30,
-                      vertical: 6,
-                    ),
-                    child: Material(
-                      elevation: 5,
-                      color: supColor,
-                      borderRadius: BorderRadius.circular(15.0),
-                      child: SizedBox(
-                        width: MediaQuery.of(context).size.width * 0.4,
-                        child: MaterialButton(
-                          minWidth: MediaQuery.of(context).size.width * 1,
-                          onPressed: () {},
-                          child: Stack(
-                            alignment: Alignment.center,
-                            children: [
-                              Text("goal 1", style: GoogleFonts.poppins()),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.end,
-                                children: [
-                                  Container(
-                                    padding: EdgeInsets.all(7),
-                                    decoration: BoxDecoration(
-                                      color: supColor,
-                                      shape: BoxShape.circle,
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 30,
+                        vertical: 6,
+                      ),
+                      child: Material(
+                        elevation: 5,
+                        color: supColor,
+                        borderRadius: BorderRadius.circular(15.0),
+                        child: SizedBox(
+                          width: MediaQuery.of(context).size.width * 0.4,
+                          child: MaterialButton(
+                            minWidth: MediaQuery.of(context).size.width * 1,
+                            onPressed: () {},
+                            child: Stack(
+                              alignment: Alignment.center,
+                              children: [
+                                Text("goal 1", style: GoogleFonts.poppins()),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.end,
+                                  children: [
+                                    Container(
+                                      padding: EdgeInsets.all(7),
+                                      decoration: BoxDecoration(
+                                        color: supColor,
+                                        shape: BoxShape.circle,
+                                      ),
+                                      child: Icon(Icons.arrow_right),
                                     ),
-                                    child: Icon(Icons.arrow_right),
-                                  ),
-                                ],
-                              ),
-                            ],
+                                  ],
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       ),
                     ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 30,
-                      vertical: 6,
-                    ),
-                    child: Material(
-                      elevation: 5,
-                      color: supColor,
-                      borderRadius: BorderRadius.circular(15.0),
-                      child: SizedBox(
-                        width: MediaQuery.of(context).size.width * 0.4,
-                        child: MaterialButton(
-                          minWidth: MediaQuery.of(context).size.width * 1,
-                          onPressed: () {},
-                          child: Stack(
-                            alignment: Alignment.center,
-                            children: [
-                              Text("goal 1", style: GoogleFonts.poppins()),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.end,
-                                children: [
-                                  Container(
-                                    padding: EdgeInsets.all(7),
-                                    decoration: BoxDecoration(
-                                      color: supColor,
-                                      shape: BoxShape.circle,
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 30,
+                        vertical: 6,
+                      ),
+                      child: Material(
+                        elevation: 5,
+                        color: supColor,
+                        borderRadius: BorderRadius.circular(15.0),
+                        child: SizedBox(
+                          width: MediaQuery.of(context).size.width * 0.4,
+                          child: MaterialButton(
+                            minWidth: MediaQuery.of(context).size.width * 1,
+                            onPressed: () {},
+                            child: Stack(
+                              alignment: Alignment.center,
+                              children: [
+                                Text("goal 1", style: GoogleFonts.poppins()),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.end,
+                                  children: [
+                                    Container(
+                                      padding: EdgeInsets.all(7),
+                                      decoration: BoxDecoration(
+                                        color: supColor,
+                                        shape: BoxShape.circle,
+                                      ),
+                                      child: Icon(Icons.arrow_right),
                                     ),
-                                    child: Icon(Icons.arrow_right),
-                                  ),
-                                ],
-                              ),
-                            ],
+                                  ],
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
-            Container(color: lightBlueBackground),
+            Container(
+              color: lightBlueBackground,
+              child: Column(children: [SizedBox(), SizedBox()]),
+            ),
           ],
         ),
       ),

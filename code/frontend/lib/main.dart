@@ -7,7 +7,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  final bool isLoggedIn = true; // test
+  final bool isLoggedIn = false; // test
 
   @override
   Widget build(BuildContext context) {
