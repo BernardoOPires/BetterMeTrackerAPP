@@ -1,0 +1,40 @@
+lib/
+├── core/                      # Código genérico, compartilhado por todo o app
+│   ├── error/                 # Classes de erro/exceções globais
+│   ├── utils/                 # Funções utilitárias e helpers
+│   └── di/                    # Injeção de dependência (GetIt, injectable, etc.)
+│
+├── features/                  # Funcionalidades principais (cada uma é um módulo)
+│   ├── auth/                  # Módulo de autenticação (login, logout)
+│   │   ├── data/              # Infraestrutura: comunicação com API e models
+│   │   │   ├── datasources/   # Chamadas HTTP (ex: AuthRemoteDataSource)
+│   │   │   └── models/        # Classes que representam os dados da API (AuthModel)
+│   │   ├── domain/            # Regras de negócio
+│   │   │   ├── entities/      # Objetos do domínio puro (AuthCredentials, Token)
+│   │   │   ├── repositories/  # Contratos que a camada `data` deve implementar
+│   │   │   └── usecases/      # Lógica de aplicação (LoginUser, LogoutUser)
+│   │   └── presentation/      # Interface com o usuário
+│   │       ├── blocs/         # Gerência de estado (LoginBloc, AuthBloc)
+│   │       ├── pages/         # Telas (LoginPage)
+│   │       └── widgets/       # Componentes visuais (formulários, botões)
+│
+│   ├── goals/                 # Módulo de metas
+│   │   ├── data/              # API de metas, modelos GoalModel
+│   │   ├── domain/            # Entidades, repositórios e casos de uso das metas
+│   │   └── presentation/      # Telas e blocos das metas
+│
+│   ├── progress/              # Módulo de progresso (geral e por meta)
+│   │   ├── data/              # Fonte de dados e modelos para progresso
+│   │   ├── domain/            # ProgressEntity, GetProgressUseCase
+│   │   └── presentation/      # Barra de progresso, dashboards, blocos
+│
+│   └── user/                  # Perfil do usuário (nome, email, preferências)
+│       ├── data/
+│       ├── domain/
+│       └── presentation/
+│
+├── shared/                    # Estilos, cores, botões e componentes reutilizáveis
+│   ├── themes/                # Tema principal da aplicação
+│   └── widgets/               # Botões, campos, cards compartilhados
+│
+└── main.dart                  # Ponto de entrada do app
