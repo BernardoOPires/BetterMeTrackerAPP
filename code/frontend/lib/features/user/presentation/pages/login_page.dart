@@ -52,14 +52,59 @@ class LoginPage extends StatelessWidget {
                     ),
                     color: Colors.white,
                   ),
-                  padding: EdgeInsets.all(20),
+                  padding: EdgeInsets.all(30),
                   child: Column(
                     children: [
+                      SizedBox(height: 60),
                       Container(
-                        padding: EdgeInsets.all(20),
                         decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(10),
                           boxShadow: [
-                            BoxShadow(color: Color.fromRGBO(225, 95, 27, .3)),
+                            BoxShadow(
+                              // color: Color.fromRGBO(225, 95, 27, .3),
+                              color: primaryColor,
+                              blurRadius: 20,
+                              offset: Offset(0, 10),
+                            ),
+                          ],
+                        ),
+                        child: Column(
+                          children: [
+                            Container(
+                              padding: EdgeInsets.all(5),
+                              decoration: BoxDecoration(
+                                border: Border(
+                                  bottom: BorderSide(
+                                    color: Colors.grey, //change to 200
+                                  ),
+                                ),
+                              ),
+                              child: TextField(
+                                decoration: InputDecoration(
+                                  hintText: "Email or Username",
+                                  hintStyle: TextStyle(color: Colors.grey),
+                                  border: InputBorder.none,
+                                ),
+                              ),
+                            ),
+                            Container(
+                              padding: EdgeInsets.all(5),
+                              // decoration: BoxDecoration(
+                              //   border: Border(
+                              //     bottom: BorderSide(
+                              //       color: Colors.grey, //change to 200
+                              //     ),
+                              //   ),
+                              // ),
+                              child: TextField(
+                                decoration: InputDecoration(
+                                  hintText: "Passworld",
+                                  hintStyle: TextStyle(color: Colors.grey),
+                                  border: InputBorder.none,
+                                ),
+                              ),
+                            ),
                           ],
                         ),
                       ),
