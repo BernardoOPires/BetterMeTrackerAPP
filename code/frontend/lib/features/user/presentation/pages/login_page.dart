@@ -9,92 +9,65 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        // appBar: , add global navbar
-        body: Center(
-          child: Container(
-            alignment: Alignment.center,
-            color: primaryColor,
-            height: MediaQuery.of(context).size.height * 0.6,
-            width: MediaQuery.of(context).size.width * 0.4,
-            child: Column(
-              children: [
-                Text("Login:", style: TextStyle(fontSize: 24)),
-                Padding(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 30,
-                    vertical: 6,
-                  ),
-                  child: Material(
-                    elevation: 5,
-                    color: supColor,
-                    borderRadius: BorderRadius.circular(15.0),
-                    child: SizedBox(
-                      width: MediaQuery.of(context).size.width * 0.4,
-                      child: MaterialButton(
-                        minWidth: MediaQuery.of(context).size.width * 1,
-                        onPressed: () {},
-                        child: Stack(
-                          alignment: Alignment.center,
-                          children: [
-                            Text("Username:", style: GoogleFonts.poppins()),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.end,
-                              children: [
-                                Container(
-                                  padding: EdgeInsets.all(7),
-                                  decoration: BoxDecoration(
-                                    color: supColor,
-                                    shape: BoxShape.circle,
-                                  ),
-                                  child: Icon(Icons.arrow_right),
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 30,
-                    vertical: 6,
-                  ),
-                  child: Material(
-                    elevation: 5,
-                    color: supColor,
-                    borderRadius: BorderRadius.circular(15.0),
-                    child: SizedBox(
-                      width: MediaQuery.of(context).size.width * 0.4,
-                      child: MaterialButton(
-                        minWidth: MediaQuery.of(context).size.width * 1,
-                        onPressed: () {},
-                        child: Stack(
-                          alignment: Alignment.center,
-                          children: [
-                            Text("Password:", style: GoogleFonts.poppins()),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.end,
-                              children: [
-                                Container(
-                                  padding: EdgeInsets.all(7),
-                                  decoration: BoxDecoration(
-                                    color: supColor,
-                                    shape: BoxShape.circle,
-                                  ),
-                                  child: Icon(Icons.arrow_right),
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
+        body: Container(
+          width: double.infinity,
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              colors: [
+                primaryColor,
+                Color.fromARGB(255, 131, 155, 228),
+                secondaryColor,
               ],
             ),
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SizedBox(height: 80),
+              Padding(
+                padding: EdgeInsets.all(20),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "Login",
+                      style: TextStyle(color: Colors.white, fontSize: 40),
+                    ),
+                    SizedBox(height: 10),
+                    Text(
+                      "Welcome back",
+                      style: TextStyle(color: Colors.white, fontSize: 20),
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(height: 20),
+              Expanded(
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(60),
+                      topRight: Radius.circular(60),
+                    ),
+                    color: Colors.white,
+                  ),
+                  padding: EdgeInsets.all(20),
+                  child: Column(
+                    children: [
+                      Container(
+                        padding: EdgeInsets.all(20),
+                        decoration: BoxDecoration(
+                          boxShadow: [
+                            BoxShadow(color: Color.fromRGBO(225, 95, 27, .3)),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
           ),
         ),
       ),
