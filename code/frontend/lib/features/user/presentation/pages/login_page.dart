@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:frontend/shared/themes/colors.dart';
+import 'package:frontend/shared/widgets/PageStructure.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class LoginPage extends StatelessWidget {
@@ -9,180 +10,182 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body: Container(
-          width: double.infinity,
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.topCenter,
-              colors: [
-                primaryColor,
-                Color.fromARGB(255, 131, 155, 228),
-                secondaryColor,
-              ],
-            ),
-          ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              SizedBox(height: 80),
-              Padding(
-                padding: EdgeInsets.all(20),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      "Login",
-                      style: TextStyle(color: Colors.white, fontSize: 30),
-                    ),
-                    SizedBox(height: 10),
-                    Text(
-                      "Welcome back",
-                      style: TextStyle(color: Colors.white, fontSize: 20),
-                    ),
-                  ],
-                ),
+        body: BaseStructure(
+          child: Container(
+            width: double.infinity,
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                colors: [
+                  primaryColor,
+                  Color.fromARGB(255, 131, 155, 228),
+                  secondaryColor,
+                ],
               ),
-              SizedBox(height: 20),
-              Expanded(
-                child: Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(60),
-                      topRight: Radius.circular(60),
-                    ),
-                    color: backgroundColor,
-                  ),
-                  padding: EdgeInsets.all(30),
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SizedBox(height: 80),
+                Padding(
+                  padding: EdgeInsets.all(20),
                   child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      SizedBox(height: 40),
-                      Container(
-                        decoration: BoxDecoration(
-                          color: backgroundColor,
-                          border: Border(
-                            bottom: BorderSide(color: Colors.grey),
+                      Text(
+                        "Login",
+                        style: TextStyle(color: Colors.white, fontSize: 30),
+                      ),
+                      SizedBox(height: 10),
+                      Text(
+                        "Welcome back",
+                        style: TextStyle(color: Colors.white, fontSize: 20),
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(height: 20),
+                Expanded(
+                  child: Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(60),
+                        topRight: Radius.circular(60),
+                      ),
+                      color: backgroundColor,
+                    ),
+                    padding: EdgeInsets.all(30),
+                    child: Column(
+                      children: [
+                        SizedBox(height: 40),
+                        Container(
+                          decoration: BoxDecoration(
+                            color: backgroundColor,
+                            border: Border(
+                              bottom: BorderSide(color: Colors.grey),
+                            ),
                           ),
-                        ),
-                        child: Column(
-                          children: [
-                            Container(
-                              padding: EdgeInsets.all(5),
-                              decoration: BoxDecoration(
-                                border: Border(
-                                  bottom: BorderSide(
-                                    color: Colors.grey, //change to 200
+                          child: Column(
+                            children: [
+                              Container(
+                                padding: EdgeInsets.all(5),
+                                decoration: BoxDecoration(
+                                  border: Border(
+                                    bottom: BorderSide(
+                                      color: Colors.grey, //change to 200
+                                    ),
+                                  ),
+                                ),
+                                child: TextField(
+                                  decoration: InputDecoration(
+                                    hintText: "Email or Username",
+                                    hintStyle: TextStyle(
+                                      color: Colors.grey,
+                                      fontSize: 15,
+                                    ),
+                                    border: InputBorder.none,
                                   ),
                                 ),
                               ),
-                              child: TextField(
-                                decoration: InputDecoration(
-                                  hintText: "Email or Username",
-                                  hintStyle: TextStyle(
-                                    color: Colors.grey,
-                                    fontSize: 15,
+                              Container(
+                                padding: EdgeInsets.all(5),
+                                child: TextField(
+                                  decoration: InputDecoration(
+                                    hintText: "Passworld",
+                                    hintStyle: TextStyle(
+                                      color: Colors.grey,
+                                      fontSize: 15,
+                                    ),
+                                    border: InputBorder.none,
                                   ),
-                                  border: InputBorder.none,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        SizedBox(height: 40),
+                        Text(
+                          "Forgot Password?",
+                          style: TextStyle(
+                            color: Colors.grey,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        SizedBox(height: 40),
+                        Container(
+                          height: 50,
+                          margin: EdgeInsets.symmetric(horizontal: 50),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(50),
+                            color: primaryColor,
+                          ),
+                          child: Center(
+                            child: Text(
+                              "Login",
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ),
+
+                        SizedBox(height: 120),
+                        Text(
+                          "Continue with social media",
+                          style: TextStyle(
+                            color: Colors.grey,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        SizedBox(height: 30),
+                        Row(
+                          children: [
+                            Expanded(
+                              child: Container(
+                                height: 50,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(50),
+                                  color: primaryColor,
+                                ),
+                                child: Center(
+                                  child: Text(
+                                    "Facebook",
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
                                 ),
                               ),
                             ),
-                            Container(
-                              padding: EdgeInsets.all(5),
-                              child: TextField(
-                                decoration: InputDecoration(
-                                  hintText: "Passworld",
-                                  hintStyle: TextStyle(
-                                    color: Colors.grey,
-                                    fontSize: 15,
+                            SizedBox(width: 30),
+                            Expanded(
+                              child: Container(
+                                height: 50,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(50),
+                                  color: secondaryColor,
+                                ),
+                                child: Center(
+                                  child: Text(
+                                    "Google",
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                    ),
                                   ),
-                                  border: InputBorder.none,
                                 ),
                               ),
                             ),
                           ],
                         ),
-                      ),
-                      SizedBox(height: 40),
-                      Text(
-                        "Forgot Password?",
-                        style: TextStyle(
-                          color: Colors.grey,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      SizedBox(height: 40),
-                      Container(
-                        height: 50,
-                        margin: EdgeInsets.symmetric(horizontal: 50),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(50),
-                          color: primaryColor,
-                        ),
-                        child: Center(
-                          child: Text(
-                            "Login",
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                        ),
-                      ),
-
-                      SizedBox(height: 120),
-                      Text(
-                        "Continue with social media",
-                        style: TextStyle(
-                          color: Colors.grey,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      SizedBox(height: 30),
-                      Row(
-                        children: [
-                          Expanded(
-                            child: Container(
-                              height: 50,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(50),
-                                color: primaryColor,
-                              ),
-                              child: Center(
-                                child: Text(
-                                  "Facebook",
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                          SizedBox(width: 30),
-                          Expanded(
-                            child: Container(
-                              height: 50,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(50),
-                                color: secondaryColor,
-                              ),
-                              child: Center(
-                                child: Text(
-                                  "Google",
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
