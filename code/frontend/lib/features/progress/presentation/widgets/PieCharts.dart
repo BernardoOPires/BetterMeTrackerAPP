@@ -48,7 +48,7 @@ class PieChartStructure extends State<PieChartSections> {
             ),
             borderData: FlBorderData(show: false),
             sectionsSpace: 0,
-            centerSpaceRadius: 0,
+            centerSpaceRadius: double.infinity,
             sections: showingSections(section),
           ),
         ),
@@ -68,16 +68,16 @@ class PieChartStructure extends State<PieChartSections> {
         color: sections[i].color,
         value: sections[i].value,
         title: sections[i].title,
-        radius: radius,
+        radius: radius / 2,
         titleStyle: TextStyle(
-          fontSize: fontSize,
+          fontSize: fontSize / 1.5,
           fontWeight: FontWeight.bold,
           color: const Color(0xffffffff),
           shadows: shadows,
         ),
         badgeWidget: _Badge(
           'assets/icons/ophthalmology-svgrepo-com.svg', /////////
-          size: widgetSize,
+          size: widgetSize / 2,
           borderColor: Colors.blue,
         ),
         badgePositionPercentageOffset: .98,

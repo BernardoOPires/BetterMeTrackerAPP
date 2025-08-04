@@ -216,8 +216,11 @@ class MainPage extends StatelessWidget {
                       height: MediaQuery.of(context).size.height * 0.15,
                       child: Row(
                         children: [
-                          Container(
-                            width: MediaQuery.of(context).size.width * 0.30,
+                          Expanded(
+                            child: PieChartSections(sectionsValue: sections5),
+                          ),
+
+                          Expanded(
                             child: Chart(
                               data: [
                                 {'genre': 'Sports', 'sold': 275},
@@ -240,10 +243,6 @@ class MainPage extends StatelessWidget {
                                 Defaults.verticalAxis,
                               ],
                             ),
-                          ),
-                          Container(
-                            width: MediaQuery.of(context).size.width * 0.35,
-                            child: PieChartSections(sectionsValue: sections5),
                           ),
                         ],
                       ),
