@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:frontend/features/core/presentation/pages/mainPage.dart';
 import 'package:frontend/features/user/presentation/pages/login_page.dart';
+import 'package:frontend/features/user/presentation/pages/register_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -11,6 +12,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: isLoggedIn ? MainPage() : LoginPage());
+    // return MaterialApp(home: isLoggedIn ? MainPage() : LoginPage());
+    return MaterialApp(home: isLoggedIn ? MainPage() : RegisterPage());
   }
 }

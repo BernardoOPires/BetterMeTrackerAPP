@@ -64,8 +64,8 @@ class LoginPage extends StatelessWidget {
                             BoxShadow(
                               // color: Color.fromRGBO(225, 95, 27, .3),
                               color: primaryColor,
-                              blurRadius: 20,
-                              offset: Offset(0, 10),
+                              blurRadius: 15,
+                              offset: Offset(0, 7),
                             ),
                           ],
                         ),
@@ -107,6 +107,83 @@ class LoginPage extends StatelessWidget {
                             ),
                           ],
                         ),
+                      ),
+                      SizedBox(height: 40),
+                      Text(
+                        "Forgot Password?",
+                        style: TextStyle(
+                          color: Colors.grey,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      SizedBox(height: 40),
+                      Container(
+                        height: 50,
+                        margin: EdgeInsets.symmetric(horizontal: 50),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(50),
+                          color: primaryColor,
+                        ),
+                        child: Center(
+                          child: Text(
+                            "Login",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                      ),
+
+                      SizedBox(height: 50),
+                      Text(
+                        "Continue with social media",
+                        style: TextStyle(
+                          color: Colors.grey,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      SizedBox(height: 30),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: Container(
+                              height: 50,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(50),
+                                color: primaryColor,
+                              ),
+                              child: Center(
+                                child: Text(
+                                  "Facebook",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                          SizedBox(width: 30),
+                          Expanded(
+                            child: Container(
+                              height: 50,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(50),
+                                color: secondaryColor,
+                              ),
+                              child: Center(
+                                child: Text(
+                                  "Google",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                     ],
                   ),
