@@ -32,7 +32,7 @@ class LoginPage extends StatelessWidget {
                   children: [
                     Text(
                       "Login",
-                      style: TextStyle(color: Colors.white, fontSize: 40),
+                      style: TextStyle(color: Colors.white, fontSize: 30),
                     ),
                     SizedBox(height: 10),
                     Text(
@@ -50,24 +50,18 @@ class LoginPage extends StatelessWidget {
                       topLeft: Radius.circular(60),
                       topRight: Radius.circular(60),
                     ),
-                    color: Colors.white,
+                    color: backgroundColor,
                   ),
                   padding: EdgeInsets.all(30),
                   child: Column(
                     children: [
-                      SizedBox(height: 60),
+                      SizedBox(height: 40),
                       Container(
                         decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(10),
-                          boxShadow: [
-                            BoxShadow(
-                              // color: Color.fromRGBO(225, 95, 27, .3),
-                              color: primaryColor,
-                              blurRadius: 15,
-                              offset: Offset(0, 7),
-                            ),
-                          ],
+                          color: backgroundColor,
+                          border: Border(
+                            bottom: BorderSide(color: Colors.grey),
+                          ),
                         ),
                         child: Column(
                           children: [
@@ -83,24 +77,23 @@ class LoginPage extends StatelessWidget {
                               child: TextField(
                                 decoration: InputDecoration(
                                   hintText: "Email or Username",
-                                  hintStyle: TextStyle(color: Colors.grey),
+                                  hintStyle: TextStyle(
+                                    color: Colors.grey,
+                                    fontSize: 15,
+                                  ),
                                   border: InputBorder.none,
                                 ),
                               ),
                             ),
                             Container(
                               padding: EdgeInsets.all(5),
-                              // decoration: BoxDecoration(
-                              //   border: Border(
-                              //     bottom: BorderSide(
-                              //       color: Colors.grey, //change to 200
-                              //     ),
-                              //   ),
-                              // ),
                               child: TextField(
                                 decoration: InputDecoration(
                                   hintText: "Passworld",
-                                  hintStyle: TextStyle(color: Colors.grey),
+                                  hintStyle: TextStyle(
+                                    color: Colors.grey,
+                                    fontSize: 15,
+                                  ),
                                   border: InputBorder.none,
                                 ),
                               ),
@@ -135,7 +128,7 @@ class LoginPage extends StatelessWidget {
                         ),
                       ),
 
-                      SizedBox(height: 50),
+                      SizedBox(height: 120),
                       Text(
                         "Continue with social media",
                         style: TextStyle(

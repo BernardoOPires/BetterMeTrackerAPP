@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // return MaterialApp(home: isLoggedIn ? MainPage() : LoginPage());
-    return MaterialApp(home: isLoggedIn ? MainPage() : RegisterPage());
+    return MaterialApp(home: isLoggedIn ? MainPage() : LoginPage());
+    // return MaterialApp(home: isLoggedIn ? MainPage() : RegisterPage());
   }
 }
