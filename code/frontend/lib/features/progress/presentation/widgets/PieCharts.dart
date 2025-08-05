@@ -35,6 +35,7 @@ class PieChartStructure extends State<PieChartSections> {
             pieTouchData: PieTouchData(
               touchCallback: (FlTouchEvent event, pieTouchResponse) {
                 setState(() {
+                  //change to BloC
                   if (!event.isInterestedForInteractions ||
                       pieTouchResponse == null ||
                       pieTouchResponse.touchedSection == null) {
@@ -82,88 +83,6 @@ class PieChartStructure extends State<PieChartSections> {
         ),
         badgePositionPercentageOffset: .98,
       );
-
-      // switch (i) {
-      // case 0:
-      //   //tranfers this to dynamic case
-      //   return PieChartSectionData(
-      //     color: sections[1].color,
-      //     value: sections[1].value, //
-      //     title: sections[1].title, //
-      //     radius: radius, //
-      //     titleStyle: TextStyle(
-      //       fontSize: fontSize,
-      //       fontWeight: FontWeight.bold,
-      //       color: const Color(0xffffffff),
-      //       shadows: shadows,
-      //     ),
-      //     badgeWidget: _Badge(
-      //       'assets/icons/ophthalmology-svgrepo-com.svg',
-      //       size: widgetSize,
-      //       borderColor: Colors.blue,
-      //     ),
-      //     badgePositionPercentageOffset: .98,
-      //   );
-      // case 1:
-      //   return PieChartSectionData(
-      //     color: sections[2].color,
-      //     value: sections[2].value, //
-      //     title: sections[2].title,
-      //     radius: radius,
-      //     titleStyle: TextStyle(
-      //       fontSize: fontSize,
-      //       fontWeight: FontWeight.bold,
-      //       color: const Color(0xffffffff),
-      //       shadows: shadows,
-      //     ),
-      //     badgeWidget: _Badge(
-      //       'assets/icons/librarian-svgrepo-com.svg',
-      //       size: widgetSize,
-      //       borderColor: Colors.yellow,
-      //     ),
-      //     badgePositionPercentageOffset: .98,
-      //   );
-      // case 2:
-      // return PieChartSectionData(
-      //   color: Colors.purple,
-      //   value: 16,
-      //   title: '16%',
-      //   radius: radius,
-      //   titleStyle: TextStyle(
-      //     fontSize: fontSize,
-      //     fontWeight: FontWeight.bold,
-      //     color: const Color(0xffffffff),
-      //     shadows: shadows,
-      //   ),
-      //   badgeWidget: _Badge(
-      //     'assets/icons/fitness-svgrepo-com.svg',
-      //     size: widgetSize,
-      //     borderColor: Colors.purple,
-      //   ),
-      //   badgePositionPercentageOffset: .98,
-      // );
-      //   case 3:
-      //     return PieChartSectionData(
-      //       color: Colors.green,
-      //       value: 15,
-      //       title: '15%',
-      //       radius: radius,
-      //       titleStyle: TextStyle(
-      //         fontSize: fontSize,
-      //         fontWeight: FontWeight.bold,
-      //         color: const Color(0xffffffff),
-      //         shadows: shadows,
-      //       ),
-      //       badgeWidget: _Badge(
-      //         'assets/icons/worker-svgrepo-com.svg',
-      //         size: widgetSize,
-      //         borderColor: Colors.green,
-      //       ),
-      //       badgePositionPercentageOffset: .98,
-      //     );
-      //   default:
-      //     throw Exception('Oh no');
-      // }
     });
   }
 }

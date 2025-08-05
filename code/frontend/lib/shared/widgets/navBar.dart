@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:frontend/features/user/presentation/pages/profile_page.dart';
 import 'package:frontend/shared/themes/colors.dart';
 
 class Navbar extends StatelessWidget implements PreferredSizeWidget {
@@ -13,12 +14,19 @@ class Navbar extends StatelessWidget implements PreferredSizeWidget {
       leading: IconButton(onPressed: () {}, icon: Icon(Icons.menu)),
       actions: [
         IconButton(onPressed: () {}, icon: Icon(Icons.share)),
-        IconButton(onPressed: () {}, icon: Icon(Icons.person)), //photo
+        IconButton(
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => ProfilePage()),
+            );
+          },
+          icon: Icon(Icons.person),
+        ), //photo
       ],
     );
   }
 
   @override
-  // TODO: implement preferredSize
   Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 }
