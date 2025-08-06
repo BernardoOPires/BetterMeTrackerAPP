@@ -3,7 +3,7 @@ import 'package:frontend/features/progress/data/models/pieChartSectionDTO.dart';
 import 'package:frontend/features/progress/presentation/widgets/PieCharts.dart';
 import 'package:frontend/shared/themes/colors.dart';
 import 'package:frontend/shared/widgets/PageStructure.dart';
-import 'package:frontend/shared/widgets/navBar.dart';
+import 'package:frontend/shared/widgets/NavBar.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:graphic/graphic.dart';
 import 'package:fl_chart/fl_chart.dart';

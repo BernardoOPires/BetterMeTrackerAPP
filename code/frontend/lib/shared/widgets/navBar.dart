@@ -7,22 +7,21 @@ class Navbar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AppBar(
+    return BottomNavigationBar(
       backgroundColor: primaryColor,
       elevation: 2,
-      title: Text("BetterMe"),
-      leading: IconButton(onPressed: () {}, icon: Icon(Icons.menu)),
-      actions: [
-        IconButton(onPressed: () {}, icon: Icon(Icons.share)),
-        IconButton(
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => ProfilePage()),
-            );
-          },
-          icon: Icon(Icons.person),
-        ), //photo
+      items: [
+        BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.auto_graph_outlined),
+          label: "Graphs",
+        ),
+        BottomNavigationBarItem(icon: Icon(Icons.task), label: "Tasks"),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.calendar_month),
+          label: "Calendar",
+        ),
+        BottomNavigationBarItem(icon: Icon(Icons.group), label: "Friends"),
       ],
     );
   }
