@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:frontend/features/user/presentation/pages/profile_page.dart';
 import 'package:frontend/shared/themes/colors.dart';
 
-class Navbar extends StatelessWidget implements PreferredSizeWidget {
-  const Navbar({super.key});
+class BottomNavBar extends StatelessWidget implements PreferredSizeWidget {
+  const BottomNavBar({super.key});
 
   @override
   Widget build(BuildContext context) {

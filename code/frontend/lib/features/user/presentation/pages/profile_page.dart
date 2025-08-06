@@ -16,7 +16,7 @@ class ProfilePage extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         backgroundColor: backgroundColor,
-        appBar: Navbar(),
+        appBar: BottomNavBar(),
         body: BaseStructure(
           child: Column(
             children: [
@@ -33,7 +33,7 @@ class ProfilePage extends StatelessWidget {
               SizedBox(height: 15),
               Container(
                 width: double.infinity,
-                height: MediaQuery.of(context).size.height * 0.6,
+                height: MediaQuery.of(context).size.height * 0.5,
                 decoration: BoxDecoration(
                   color: backgroundColor,
                   borderRadius: BorderRadius.only(
