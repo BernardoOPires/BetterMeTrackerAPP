@@ -11,7 +11,11 @@ class BottomNavBar extends StatelessWidget implements PreferredSizeWidget {
       backgroundColor: primaryColor,
       elevation: 2,
       items: [
-        BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
+        BottomNavigationBarItem(
+          backgroundColor: primaryColor,
+          icon: Icon(Icons.home),
+          label: "Home",
+        ),
         BottomNavigationBarItem(
           icon: Icon(Icons.auto_graph_outlined),
           label: "Graphs",
